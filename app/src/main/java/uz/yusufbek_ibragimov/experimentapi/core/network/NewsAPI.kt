@@ -1,8 +1,12 @@
 package uz.yusufbek_ibragimov.experimentapi.core.network
 
+import okhttp3.RequestBody
+import okhttp3.ResponseBody
+import retrofit2.Call
 import retrofit2.http.*
 import uz.yusufbek_ibragimov.experimentapi.core.model.news_model.NewsResponse
 import uz.yusufbek_ibragimov.experimentapi.core.model.news_model.NewsResponseItem
+
 
 /**
  * Bismillah
@@ -26,5 +30,12 @@ interface NewsAPI {
         @Path("id") id: Int,
         @Body newsResponseItem: NewsResponseItem
     ): NewsResponseItem
+
+    @Multipart
+    @POST("api/news/{id}")
+    fun upload(
+        @Part("description") description: RequestBody?,
+        @Part file: Part?
+    ): Call<ResponseBody?>?
 
 }

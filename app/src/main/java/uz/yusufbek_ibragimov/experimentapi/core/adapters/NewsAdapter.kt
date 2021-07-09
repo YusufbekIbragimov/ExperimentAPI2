@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import uz.yusufbek_ibragimov.experimentapi.core.model.news_model.NewsResponse
 import uz.yusufbek_ibragimov.experimentapi.core.model.news_model.NewsResponseItem
 import uz.yusufbek_ibragimov.experimentapi.core.utils.GlideApp
+import uz.yusufbek_ibragimov.experimentapi.core.utils.IMAGE_BASE_URL
 import uz.yusufbek_ibragimov.experimentapi.databinding.ListItemBinding
 
 /**
@@ -32,7 +33,7 @@ class NewsAdapter(var context: Context, var onLongClickListener: OnLongClickList
 
         fun bindData(newsResponseItem: NewsResponseItem, position: Int) {
 
-            GlideApp.with(context).load(newsResponseItem.newsImg).into(bind.imageId)
+            GlideApp.with(context).load(IMAGE_BASE_URL+newsResponseItem.newsImg).into(bind.imageId)
             bind.titleId.text=newsResponseItem.title
             bind.description.text=newsResponseItem.description
             bind.createdId.text=newsResponseItem.created_at

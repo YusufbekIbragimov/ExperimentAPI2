@@ -8,6 +8,7 @@ package uz.yusufbek_ibragimov.experimentapi.core.utils
  * */
 
 const val BASE_URL="https://test.laragroup.uz/"
-val example_image_url_1="https://test.laragroup.uz/storage/images/8DoQZcp7iPgcQ9lSmUtzpMM510lov23mQaMcUWZu.jpg"
-val example_image_url_2_="https://test.laragroup.uz/storage/images/7GtzB7Axml2L1URq4Xd9ILX5UNdQGmDvD3fysLKo.jpg"
-val example_image_url_3_="https://test.laragroup.uz/storage/images/EaAmY9VkntbWUn6GU38Q39WMxzu3NMJExLHhLpbE.jpg"
+const val IMAGE_BASE_URL="https://test.laragroup.uz/storage/"
+val example_image_url_1="images/8DoQZcp7iPgcQ9lSmUtzpMM510lov23mQaMcUWZu.jpg"
+val example_image_url_2_="images/7GtzB7Axml2L1URq4Xd9ILX5UNdQGmDvD3fysLKo.jpg"
+val example_image_url_3_="images/EaAmY9VkntbWUn6GU38Q39WMxzu3NMJExLHhLpbE.jpg"
